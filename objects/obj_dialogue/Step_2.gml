@@ -1,6 +1,6 @@
-/*if (current_message < 0) exit; 
+if (current_message < 0) exit; 
     
-var _str = message[current_message].msg;
+var _str = messages[current_message].msg;
 
 if (current_char < string_length(_str))
 {
