@@ -1,3 +1,4 @@
+
 var _dx = 0;
 var _dy = gui_h * 0.7;
 var _boxw = gui_w;
@@ -17,4 +18,4 @@ draw_set_colour(c_white); //ibalik to white
 
 _dy += 40;  
 
-draw_text_ext(_dx, _dy, draw_message, -1, _boxw - _dx *2);
+draw_text_ext(_dx, _dy, draw_message, -1, _boxw - _dx * 2);
