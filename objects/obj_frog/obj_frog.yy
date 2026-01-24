@@ -16,7 +16,10 @@
     "name":"gamejam",
     "path":"gamejam.yyp",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_frog_parent",
+    "path":"objects/obj_frog_parent/obj_frog_parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
