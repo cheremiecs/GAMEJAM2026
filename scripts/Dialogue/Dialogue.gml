@@ -13,7 +13,8 @@ char_colors = {
     "Chan" : c_orange,
     "Barney" : c_teal,
     "Dayan" : c_purple,
-    "Chim" : c_fuchsia
+    "Chim" : c_fuchsia,
+    "Ghost Frog" : c_white
 }
 
 welcome_dialog = [
@@ -89,4 +90,11 @@ chim_diag1 = [
     name: "Chim",
     msg: "..."
 },
+]
+
+ghost_diag1 = [
+{
+    name: "Ghost Frog",
+    msg: "Go to that cave, your way up to whatever path you want lies inside."
+}
 ]
