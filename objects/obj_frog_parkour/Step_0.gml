@@ -1,172 +1,118 @@
-/*if (instance_exists(obj_dialogue)) exit; //check if instance exists para mawala dialog if not talking ADD THIS TO ENEMY OBJ IF EVER MAGENEMY TA
-
-
-var _hor = keyboard_check(ord("D")) - keyboard_check(ord("A"));
-var _ver = keyboard_check(ord("S")) - keyboard_check(ord("W"));
-
-//jumping part
-
-if (keyboard_check_pressed(vk_space) && !is_jumping)
-{
-    is_jumping = true;
-    jump_timer = 0;
-    
-    // Store jump direction based on current facing or input
-    if (_hor != 0 || _ver != 0)
-    {
-        jump_dir_x = _hor;
-        jump_dir_y = _ver;
-    }
-    else
-    {
-        // Jump in facing direction if no input
-        jump_dir_x = lengthdir_x(1, facing);
-        jump_dir_y = lengthdir_y(1, facing);
-    }
-}
-
-// Handle jumping
-if (is_jumping)
-{
-    jump_timer++;
-    
-    // Move during jump
-    var _jump_speed = jump_distance / jump_duration;
-    move_and_collide(jump_dir_x * _jump_speed, jump_dir_y * _jump_speed, tilemap, undefined, undefined, undefined, move_speed, move_speed);
-    
-    // Update sprite based on jump direction
-    if (jump_dir_y > 0) sprite_index = spr_frog_jp_down;
-    else if (jump_dir_y < 0) sprite_index = spr_frog_hop_up;
-    else if (jump_dir_x > 0) sprite_index = spr_frog_hop_right;
-    else if (jump_dir_x < 0) sprite_index = spr_frog_hop_left;
-    
-    // End jump
-    if ( keyboard_check_released(vk_space) || jump_timer >= jump_duration)
-    {
-        is_jumping = false;
-        jump_timer = 0;
-        
-        //idle movements if done jumping 
-        if (sprite_index == spr_frog_hop_right) sprite_index = spr_frog_idle_right;
-        else if (sprite_index == spr_frog_hop_left) sprite_index = spr_frog_idle_left;
-        else if (sprite_index == spr_frog_hop_up) sprite_index = spr_frog_idle_up;
-        else if (sprite_index == spr_frog_hop_down) sprite_index = spr_frog_idle_down;
-    }
-}
-else // Normal movement (only when not jumping)
-{
-    move_and_collide(_hor * move_speed, _ver * move_speed, tilemap, undefined, undefined, undefined, move_speed, move_speed);
-    
-    // Movements
-    if (_hor != 0 or _ver != 0)
-    {
-        if (_ver > 0) sprite_index = spr_frog_hop_down; 
-        else if (_ver < 0) sprite_index = spr_frog_hop_up;
-        else if (_hor > 0) sprite_index = spr_frog_hop_right;
-        else if (_hor < 0) sprite_index = spr_frog_hop_left;
-                        
-        facing = point_direction(0, 0, _hor, _ver);
-    }
-    else 
-    {
-        if (sprite_index == spr_frog_hop_right) sprite_index = spr_frog_idle_right;
-        else if (sprite_index == spr_frog_hop_left) sprite_index = spr_frog_idle_left;
-        else if (sprite_index == spr_frog_hop_up) sprite_index = spr_frog_idle_up;
-        else if (sprite_index == spr_frog_hop_down) sprite_index = spr_frog_idle_down;
-    }
-}
-
-/*
-//i watched the tutorial ani and i added the undef undef undef after tilemap
-move_and_collide(_hor * move_speed, _ver * move_speed, tilemap, undefined, undefined, undefined,move_speed, move_speed);
-
-
-//movements
-if (_hor != 0 or _ver != 0)
-{
-    if (_ver > 0) sprite_index = spr_frog_hop_down; 
-        else if (_ver < 0) sprite_index = spr_frog_hop_up;
-            else if (_hor > 0) sprite_index = spr_frog_hop_right;
-                else if (_hor < 0) sprite_index = spr_frog_hop_left;
-                    
-    facing = point_direction(0, 0, _hor, _ver);
-}
-else 
-{
-if (sprite_index == spr_frog_hop_right)	sprite_index = spr_frog_idle_right;
-    else if (sprite_index == spr_frog_hop_left) sprite_index = spr_frog_idle_left;
-        else if (sprite_index == spr_frog_hop_up) sprite_index = spr_frog_idle_up;
-            else if (sprite_index == spr_frog_hop_down) sprite_index = spr_frog_idle_down;
-}
-
-*/
-
-
-
-/*
-//attacking
-if (mouse_check_button_pressed(mb_left)) //left btn to attack
-{
-    var _inst = instance_create_depth(x, y, depth, obj_attack);
-    _inst.image_angle = facing;
-    _inst.damage *= damage;
-} */
-
 if (instance_exists(obj_dialogue)) exit;
 
 // Horizontal movement
 var _hor = keyboard_check(ord("D")) - keyboard_check(ord("A"));
-vel_x = _hor * move_speed; // Changed
+vel_x = _hor * move_speed;
 
-// Apply gravity
-vel_y += grav; // Changed
-if (vel_y > max_fall_speed) vel_y = max_fall_speed; // Changed
-
-// Check if on ground BEFORE moving
+// Check if on ground
 var _was_on_ground = on_ground;
 on_ground = place_meeting(x, y + 1, tilemap);
 
-// Reset jumps when landing
-if (on_ground && !_was_on_ground)
+// Coyote time logic
+if (on_ground)
 {
+    coyote_timer = coyote_time;
     jumps_left = max_jumps;
 }
-
-// Double Jump
-if (keyboard_check_pressed(vk_space) && jumps_left > 0)
+else
 {
-    vel_y = jump_speed; // Changed
+    if (coyote_timer > 0) coyote_timer--;
+}
+
+// Apply gravity ONLY after coyote time expires
+if (coyote_timer <= 0)
+{
+    vel_y += grav;
+    if (vel_y > max_fall_speed) vel_y = max_fall_speed;
+}
+else
+{
+    vel_y = 0;
+}
+
+// Stamina regeneration
+if (stamina_delay_timer > 0)
+{
+    stamina_delay_timer--;
+}
+else if (on_ground && stamina < max_stamina)
+{
+    stamina += stamina_regen;
+    if (stamina > max_stamina) stamina = max_stamina;
+}
+
+// Double Jump with stamina check
+if (keyboard_check_pressed(vk_space) && jumps_left > 0 && stamina >= jump_stamina_cost)
+{
+    vel_y = jump_speed;
     jumps_left--;
+    stamina -= jump_stamina_cost;
+    stamina_delay_timer = stamina_regen_delay;
+    coyote_timer = 0;
 }
 
-// Move vertically FIRST
-if (place_meeting(x, y + vel_y, tilemap)) // Changed
+// IMPROVED VERTICAL MOVEMENT
+if (vel_y != 0)
 {
-    while (!place_meeting(x, y + sign(vel_y), tilemap)) // Changed
+    if (place_meeting(x, y + vel_y, tilemap))
     {
-        y += sign(vel_y); // Changed
+        // Pixel-perfect collision
+        var _step = sign(vel_y);
+        while (!place_meeting(x, y + _step, tilemap))
+        {
+            y += _step;
+        }
+        vel_y = 0;
     }
-    vel_y = 0; // Changed
+    else
+    {
+        y += vel_y;
+    }
 }
-y += vel_y; // Changed
 
-// Move horizontally AFTER
-if (place_meeting(x + vel_x, y, tilemap)) // Changed
+// IMPROVED HORIZONTAL MOVEMENT with unstuck fix
+if (vel_x != 0)
 {
-    while (!place_meeting(x + sign(vel_x), y, tilemap)) // Changed
+    if (place_meeting(x + vel_x, y, tilemap))
     {
-        x += sign(vel_x); // Changed
+        // Try to move pixel by pixel
+        var _step = sign(vel_x);
+        var _moved = false;
+        
+        while (!place_meeting(x + _step, y, tilemap))
+        {
+            x += _step;
+            _moved = true;
+        }
+        
+        // If completely stuck, try sliding up/down slightly
+        if (!_moved)
+        {
+            // Try moving up 1-2 pixels to unstick
+            if (!place_meeting(x + vel_x, y - 1, tilemap))
+            {
+                y -= 1;
+            }
+            else if (!place_meeting(x + vel_x, y - 2, tilemap))
+            {
+                y -= 2;
+            }
+        }
+        
+        vel_x = 0;
     }
-    vel_x = 0; // Changed
+    else
+    {
+        x += vel_x;
+    }
 }
-x += vel_x; // Changed
 
 // Sprite handling
 if (_hor != 0) facing = sign(_hor);
 
-if (!on_ground)
+if (!on_ground && coyote_timer <= 0)
 {
-    if (vel_y < 0) // Changed
+    if (vel_y < 0)
     {
         sprite_index = (facing > 0) ? spr_frog_hop_up : spr_frog_hop_up;
     }
@@ -177,7 +123,12 @@ if (!on_ground)
 }
 else
 {
-    if (_hor != 0)
+    // Show tired sprite when low stamina
+    if (stamina < jump_stamina_cost)
+    {
+        sprite_index = spr_frog_tired;
+    }
+    else if (_hor != 0)
     {
         sprite_index = (facing > 0) ? spr_frog_hop_right : spr_frog_hop_left;
     }
@@ -194,3 +145,6 @@ if (mouse_check_button_pressed(mb_left))
     _inst.image_angle = (facing > 0) ? 0 : 180;
     _inst.damage *= damage;
 }
+
+// Camera follow
+camera_set_view_pos(view_camera[0], x - camera_get_view_width(view_camera[0]) / 2, y - camera_get_view_height(view_camera[0]) / 2);

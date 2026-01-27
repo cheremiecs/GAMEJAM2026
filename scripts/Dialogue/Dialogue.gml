@@ -95,6 +95,26 @@ chim_diag1 = [
 ghost_diag1 = [
 {
     name: "Ghost Frog",
-    msg: "Go to that cave, your way up to whatever path you want lies inside."
+    msg: "You have climbed far... farther than most with legs of flesh."
+},
+{
+    name: "Ghost Frog",
+    msg: "This hole... it is not just a tunnel."
+},
+{
+    name: "Ghost Frog",
+    msg: "It is where I left pieces of myself behind."
+},
+{
+    name: "Ghost Frog",   
+    msg: "Three fragments... small sparks of what I used to be."
+},
+{
+    name: "Ghost Frog",
+    msg: "If you gather them... the maze will recognize you."
+},
+{
+    name: "Ghost Frog",
+    msg: "Step forward, the path less taken awaits."
 }
 ]

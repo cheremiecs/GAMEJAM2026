@@ -1,4 +1,3 @@
-
 // Draw dark overlay
 draw_set_alpha(alpha);
 draw_set_color(c_black);
@@ -12,7 +11,7 @@ if (alpha >= 0.8)
     draw_set_valign(fa_middle);
     
     // Death message
-    draw_text(gui_width / 2, gui_height / 2 - 40, "YOU DIED.");
+    draw_text(gui_width / 2, gui_height / 2 - 40, "YOU DIED");
     
     // Smaller text
     draw_set_alpha(alpha * 0.7);

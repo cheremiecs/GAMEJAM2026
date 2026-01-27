@@ -50,7 +50,7 @@ if (is_jumping)
         if (sprite_index == spr_frog_hop_right) sprite_index = spr_frog_idle_right;
         else if (sprite_index == spr_frog_hop_left) sprite_index = spr_frog_idle_left;
         else if (sprite_index == spr_frog_hop_up) sprite_index = spr_frog_idle_up;
-        else if (sprite_index == spr_frog_hop_down) sprite_index = spr_frog_idle_down;
+        else if (sprite_index == spr_frog_hop_down) sprite_index = spr_frog_idle_dead;
     }
 }
 else // Normal movement (only when not jumping)
@@ -72,7 +72,7 @@ else // Normal movement (only when not jumping)
         if (sprite_index == spr_frog_hop_right) sprite_index = spr_frog_idle_right;
         else if (sprite_index == spr_frog_hop_left) sprite_index = spr_frog_idle_left;
         else if (sprite_index == spr_frog_hop_up) sprite_index = spr_frog_idle_up;
-        else if (sprite_index == spr_frog_hop_down) sprite_index = spr_frog_idle_down;
+        else if (sprite_index == spr_frog_hop_down) sprite_index = spr_frog_idle_dead;
     }
 }
 
