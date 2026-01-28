@@ -25,7 +25,43 @@ else if (stamina < max_stamina)
 var _hor = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 var _ver = keyboard_check(ord("S")) - keyboard_check(ord("W"));
 
-move_and_collide(_hor * move_speed, _ver * move_speed, tilemap, undefined, undefined, undefined, move_speed, move_speed);
+// IMPROVED MOVEMENT - prevents getting stuck
+var _hspd = _hor * move_speed;
+var _vspd = _ver * move_speed;
+
+// Horizontal movement
+if (_hspd != 0)
+{
+    if (!place_meeting(x + _hspd, y, tilemap))
+    {
+        x += _hspd;
+    }
+    else
+    {
+        // Pixel-perfect collision
+        while (!place_meeting(x + sign(_hspd), y, tilemap))
+        {
+            x += sign(_hspd);
+        }
+    }
+}
+
+// Vertical movement
+if (_vspd != 0)
+{
+    if (!place_meeting(x, y + _vspd, tilemap))
+    {
+        y += _vspd;
+    }
+    else
+    {
+        // Pixel-perfect collision
+        while (!place_meeting(x, y + sign(_vspd), tilemap))
+        {
+            y += sign(_vspd);
+        }
+    }
+}
 
 // Movements
 if (_hor != 0 or _ver != 0)

@@ -1,7 +1,7 @@
 {
   "$GMRoom":"v1",
   "%Name":"Room2",
-  "creationCodeFile":"",
+  "creationCodeFile":"rooms/Room2/RoomCreationCode.gml",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
@@ -9,16 +9,18 @@
     {"name":"inst_56993147","path":"rooms/Room2/Room2.yy",},
     {"name":"inst_7CB32A59","path":"rooms/Room2/Room2.yy",},
     {"name":"inst_7CC1B496","path":"rooms/Room2/Room2.yy",},
+    {"name":"inst_2018881F","path":"rooms/Room2/Room2.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRPathLayer":"","%Name":"Path_1","colour":4278190335,"depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Path_1","pathId":null,"properties":[],"resourceType":"GMRPathLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v4","%Name":"inst_56993147","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_56993147","objectId":{"name":"obj_frog_parkour","path":"objects/obj_frog_parkour/obj_frog_parkour.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":96.0,"y":320.0,},
+        {"$GMRInstance":"v4","%Name":"inst_56993147","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_56993147","objectId":{"name":"obj_frog_parkour","path":"objects/obj_frog_parkour/obj_frog_parkour.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":192.0,"y":992.0,},
         {"$GMRInstance":"v4","%Name":"inst_7CB32A59","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7CB32A59","objectId":{"name":"obj_warp_block_1","path":"objects/obj_warp_block_1/obj_warp_block_1.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":256.0,"y":256.0,},
         {"$GMRInstance":"v4","%Name":"inst_7CC1B496","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7CC1B496","objectId":{"name":"obj_npc_ghost","path":"objects/obj_npc_ghost/obj_npc_ghost.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_npc_ghost","path":"objects/obj_npc_ghost/obj_npc_ghost.yy",},"propertyId":{"name":"dialog","path":"objects/obj_npc_ghost/obj_npc_ghost.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"global.ghost_diag1",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":64.0,"y":326.0,},
+        {"$GMRInstance":"v4","%Name":"inst_2018881F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2018881F","objectId":{"name":"obj_instructions_room2","path":"objects/obj_instructions_room2/obj_instructions_room2.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":288.0,"y":960.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Tile_col","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tile_col","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":68,"SerialiseWidth":23,"TileCompressedData":[
           1,3,-18,-2147483648,5,0,-2147483648,-2147483648,3,3,-21,-2147483648,-2,3,-21,0,-2,3,-21,0,-2,3,-21,0,
