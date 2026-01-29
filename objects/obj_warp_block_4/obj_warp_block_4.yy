@@ -1,13 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_warp_block_2",
+  "%Name":"obj_warp_block_4",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_warp_block_2",
+  "name":"obj_warp_block_4",
   "overriddenProperties":[],
   "parent":{
     "name":"gamejam",
@@ -32,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_tplastpart",
-    "path":"sprites/spr_tplastpart/spr_tplastpart.yy",
+    "name":"spr_naur",
+    "path":"sprites/spr_naur/spr_naur.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -28,3 +28,5 @@ stamina_delay_timer = 0;
 // Coyote time
 coyote_time = 6;
 coyote_timer = 0;
+
+mask_index = spr_frog_collision;

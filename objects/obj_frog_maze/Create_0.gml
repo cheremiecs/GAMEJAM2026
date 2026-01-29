@@ -17,3 +17,5 @@ attack_stamina_cost = 25;
 stamina_regen = 0.8;
 stamina_regen_delay = 30;
 stamina_delay_timer = 0;
+
+mask_index = spr_frog_collision;

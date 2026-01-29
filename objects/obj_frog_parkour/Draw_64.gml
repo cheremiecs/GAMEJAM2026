@@ -23,7 +23,7 @@ draw_sprite_stretched_ext(spr_box, 1, _dx, _dy, _stamina_barw, _barh, _stamina_c
 draw_set_font(Font2); // Set your stamina font
 draw_set_color(c_white);
 draw_set_halign(fa_center);
-draw_text(_dx + _barw / 2, _dy + 8, "Stamina: " + string(floor(stamina)) + "/" + string(max_stamina));
+draw_text(_dx + _barw / 2, _dy + 8, "STAMINA");
 draw_set_halign(fa_left);
 
 // Restore original font

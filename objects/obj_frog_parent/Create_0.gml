@@ -13,3 +13,5 @@ is_jumping = false;
 jump_timer = 0;
 jump_duration = 15; 
 jump_distance = 32;
+
+mask_index = spr_frog_collision;
