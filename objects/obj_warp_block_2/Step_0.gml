@@ -1,5 +1,5 @@
 // Check if all enemies are dead before allowing teleport
-var _enemies_alive = instance_number(obj_enemy_parent) + instance_number(obj_enemy_parent_boss);
+var _enemies_alive = instance_number(obj_enemy_parent_maze) + instance_number(obj_enemy_parent_boss);
 
 if (place_meeting(x, y, obj_frog_maze) && !instance_exists(obj_warp) && _enemies_alive == 0)
 {
