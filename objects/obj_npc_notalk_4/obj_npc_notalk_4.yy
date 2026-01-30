@@ -37,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_enemy2",
-    "path":"sprites/spr_enemy2/spr_enemy2.yy",
+    "name":"spr_froglets",
+    "path":"sprites/spr_froglets/spr_froglets.yy",
   },
   "spriteMaskId":null,
   "visible":true,

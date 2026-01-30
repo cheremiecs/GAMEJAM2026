@@ -37,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_enemy2",
-    "path":"sprites/spr_enemy2/spr_enemy2.yy",
+    "name":"spr_boots",
+    "path":"sprites/spr_boots/spr_boots.yy",
   },
   "spriteMaskId":null,
   "visible":true,

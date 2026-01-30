@@ -14,7 +14,7 @@ draw_sprite_stretched_ext(spr_box, 1, _dx, _dy, _health_barw, _barh, c_red, 0.6)
 
 draw_set_color(c_white);
 draw_set_halign(fa_center);
-draw_text(_dx + _barw / 2, _dy + 8, "Health: " + string(floor(hp)) + "/" + string(hp_total));
+draw_text(_dx + _barw / 2, _dy + 8, "Health");
 draw_set_halign(fa_left);
 
 
@@ -32,7 +32,7 @@ draw_sprite_stretched_ext(spr_box, 1, _dx, _stamina_y, _stamina_barw, _barh, _st
 
 draw_set_color(c_white);
 draw_set_halign(fa_center);
-draw_text(_dx + _barw / 2, _stamina_y + 8, "Stamina: " + string(floor(stamina)) + "/" + string(max_stamina));
+draw_text(_dx + _barw / 2, _stamina_y + 8, "Stamina") ;
 draw_set_halign(fa_left);
 
 // Restore font

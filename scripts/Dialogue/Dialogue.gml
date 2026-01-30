@@ -67,41 +67,65 @@ chan_diag1 = [
     name: "Chan",
     msg: "I would never ever leave this place."
 },
+
+{
+    name: "Chan",
+    msg: "Leave? The well is safe. The well is home. Out there... who knows what lurks? Why risk it when everything you want is already here?"
+},
 ]
 
 barney_diag1 = [
 {
     name: "Barney",
-    msg: "frog."
+    msg: "FROG FACT."
 },
 
 {
     name: "Barney",
-    msg: "Ever though what is it like outside. Is there even an outside?"
+    msg: "Did you know that poison dart frogs do not have poison by birth? They get their poison by eating specific insects in the wild!"
 },
+
+{
+    name: "Barney",
+    msg: "Oh... hi judges! I can see you. "
+},
+{
+    name: "Barney",
+    msg: "Um... the devs said this is their first game, so we are both kinda new at this... go easy on us?"
+}
 ]
 
 dayan_diag1 = [
 {
     name: "Dayan",
-    msg: "They say not to venture out this place."
+    msg: "The world beyond the well is not kind. Creatures roam out there... not like us."
 },
 
 {
     name: "Dayan",
-    msg: "It is dangerous out there."
+    msg: "..."
+},
+
+{
+    name: "Dayan",
+    msg: "Oh! I did not see you there. I was definitely not talking to myself. Nope. Not me."
 },
 ]
 
 chim_diag1 = [
 {
     name: "Chim",
-    msg: "Path less taken."
+    msg: "Go right and you’ll see the way out."
 },
 
 {
     name: "Chim",
-    msg: "..."
+    msg: "You have been curious about the outside, have you not?"
+},
+
+{
+    name: "Chim",
+    msg: "I cannot blame you... it calls to all of us."
 },
 ]
 
@@ -112,7 +136,7 @@ ghost_diag1 = [
 },
 {
     name: "Ghost Frog",
-    msg: "This hole... it is not just a tunnel."
+    msg: "This pathway... it is not just a tunnel."
 },
 {
     name: "Ghost Frog",
@@ -151,6 +175,7 @@ ancient_frog_diag1 = [
 }
 ]
 
+/*
 // Choices for Ancient Frog
 ancient_frog_choices = [
 {

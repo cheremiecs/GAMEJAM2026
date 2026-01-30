@@ -41,8 +41,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_enemy1",
-    "path":"sprites/spr_enemy1/spr_enemy1.yy",
+    "name":"spr_bossing",
+    "path":"sprites/spr_bossing/spr_bossing.yy",
   },
   "spriteMaskId":null,
   "visible":true,

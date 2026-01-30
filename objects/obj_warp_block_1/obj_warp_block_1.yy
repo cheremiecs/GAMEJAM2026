@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_warp_block3",
-    "path":"sprites/spr_warp_block3/spr_warp_block3.yy",
+    "name":"srp_warp_block",
+    "path":"sprites/srp_warp_block/srp_warp_block.yy",
   },
   "spriteMaskId":null,
   "visible":true,

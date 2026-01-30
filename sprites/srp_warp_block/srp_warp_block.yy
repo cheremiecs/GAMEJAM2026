@@ -19,7 +19,7 @@
   "height":64,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"919fecbe-6e76-4363-917e-496b72f1f871","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"919fecbe-6e76-4363-917e-496b72f1f871","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"919fecbe-6e76-4363-917e-496b72f1f871","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"919fecbe-6e76-4363-917e-496b72f1f871","opacity":4.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"123a4600-824c-4b5e-b314-734b0f072023","blendMode":0,"displayName":"default","isLocked":false,"name":"123a4600-824c-4b5e-b314-734b0f072023","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
   ],
   "name":"srp_warp_block",

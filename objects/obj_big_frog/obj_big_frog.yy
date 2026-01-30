@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_big_frog",
-    "path":"sprites/spr_big_frog/spr_big_frog.yy",
+    "name":"spr_bigfroggy",
+    "path":"sprites/spr_bigfroggy/spr_bigfroggy.yy",
   },
   "spriteMaskId":null,
   "visible":true,

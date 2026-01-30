@@ -10,5 +10,5 @@ instructions = [
     "EP 2: THE FIRST HOPS",
     "Press SPACE twice to DOUBLE JUMP",
     "Double jumping costs more STAMINA!",
-    "Speak with him. He knows the way."
+    "Go on... speak to the spirit. He knows the path."
 ];

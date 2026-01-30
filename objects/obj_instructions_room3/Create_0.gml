@@ -10,5 +10,5 @@ instructions = [
     "EP 3: HOP INTO DANGER",
     "Use LEFT CLICK to attack enemies.",
     "Find and collect all 3 fragments.",
-    "Be careful, danger lurks around every corner!"
+    "Clear the foes that linger. Only then will the path reveal itself."
 ];

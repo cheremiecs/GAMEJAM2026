@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_ARROW",
-    "path":"sprites/spr_ARROW/spr_ARROW.yy",
+    "name":"spr_firefly",
+    "path":"sprites/spr_firefly/spr_firefly.yy",
   },
   "spriteMaskId":null,
   "visible":true,

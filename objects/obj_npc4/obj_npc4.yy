@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_npc1",
-    "path":"sprites/spr_npc1/spr_npc1.yy",
+    "name":"spr_dayan",
+    "path":"sprites/spr_dayan/spr_dayan.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -3,7 +3,7 @@ var _gui_height = display_get_gui_height();
 
 // Save settings
 var _old_font = draw_get_font();
-draw_set_font(Font2);
+draw_set_font(Font3);
 
 // Semi-transparent background
 draw_set_alpha(alpha * 0.7);

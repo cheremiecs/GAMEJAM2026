@@ -19,7 +19,7 @@
   "height":64,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"1b0a301b-b77d-4316-b2bc-61fdf8e271b6","blendMode":0,"displayName":"default","isLocked":false,"name":"1b0a301b-b77d-4316-b2bc-61fdf8e271b6","opacity":37.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"1b0a301b-b77d-4316-b2bc-61fdf8e271b6","blendMode":0,"displayName":"default","isLocked":false,"name":"1b0a301b-b77d-4316-b2bc-61fdf8e271b6","opacity":21.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_tplastpart",
   "nineSlice":null,
