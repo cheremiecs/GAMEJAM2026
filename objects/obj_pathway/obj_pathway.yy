@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_pathway",
-    "path":"sprites/spr_pathway/spr_pathway.yy",
+    "name":"spr_firefly",
+    "path":"sprites/spr_firefly/spr_firefly.yy",
   },
   "spriteMaskId":null,
   "visible":true,

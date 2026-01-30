@@ -77,26 +77,26 @@ barney_diag1 = [
 
 {
     name: "Barney",
-    msg: "Moo."
+    msg: "Ever though what is it like outside. Is there even an outside?"
 },
 ]
 
 dayan_diag1 = [
 {
     name: "Dayan",
-    msg: "HIYAAAAAA!"
+    msg: "They say not to venture out this place."
 },
 
 {
     name: "Dayan",
-    msg: "..."
+    msg: "It is dangerous out there."
 },
 ]
 
 chim_diag1 = [
 {
     name: "Chim",
-    msg: "Kontol is not real."
+    msg: "Path less taken."
 },
 
 {
