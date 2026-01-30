@@ -115,7 +115,7 @@ dayan_diag1 = [
 chim_diag1 = [
 {
     name: "Chim",
-    msg: "Go right and you’ll see the way out."
+    msg: "Go right and you will see the way out."
 },
 
 {
