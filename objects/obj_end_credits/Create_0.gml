@@ -1,10 +1,10 @@
-credits_y = display_get_gui_height(); // Start below screen
-scroll_speed = 3; // Adjust for faster/slower scroll
+credits_y = display_get_gui_height(); 
+scroll_speed = 3; 
 fade_alpha = 0;
 fade_speed = 0.02;
-state = "fade_in"; // fade_in, scrolling, fade_out
+state = "fade_in"; 
 
-// Credits text
+
 credits_text = [
     "",
     "",

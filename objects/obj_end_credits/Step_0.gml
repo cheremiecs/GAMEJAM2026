@@ -29,6 +29,6 @@ else if (state == "fade_out")
     fade_alpha -= fade_speed;
     if (fade_alpha <= 0)
     {
-        game_restart(); // Or room_goto(rm_menu) if you have a menu
+        game_restart();
     }
 }
